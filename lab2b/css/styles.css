@@ -1,0 +1,44 @@
+body{
+    color: #404040;
+    font-size: 11pt;
+    font-family: Georgia, Garamond, Serif;
+}
+
+h1{
+    color: #A4A400;
+     background-color: #F0F0F0;
+     font-size: 18pt;
+     font-family: "Lucida Sans", Helvetica, Arial;
+     text-decoration: underline;
+ }
+
+ .heading{
+    font-size: 22pt;
+    text-align: center;
+}
+
+.link{
+    color: #A4A400;
+}
+
+.pie{
+    list-style-type: none;
+    padding: 0px;
+}
+
+.directions{
+    font-weight: bold;
+}
+
+blockquote {
+    background-color: #FFFFA8;
+    font-style: italic;
+}
+
+.copy-right{
+    text-align: right;
+}
+
+.validator{
+    text-align: right;
+}
