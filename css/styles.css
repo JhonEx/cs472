@@ -19,13 +19,13 @@ body {
 }
 
 .choices{
-    margin: 10px 0;
+    margin: 10px;
     text-align: left;
 }
 
 .choice{
     padding: 10px;
-    margin-top: 0 20px;
+    margin-top: 20px;
     display: inline-block;
     transition: all 0.3s ease;
 }
