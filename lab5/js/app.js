@@ -10,9 +10,9 @@ function myFunctionTest(expected, found){
 
 console.log("Expected output of max (10, 5) is 10 " + myFunctionTest(10, max(10,5)));
 console.log("Expected output of maxOfThree (10, 5, 70) is 70 " + myFunctionTest(70, maxOfThree(10,5,70)));
-console.log("Expected output of isVowel is e " + myFunctionTest(true, isVowel("e")));
-console.log("Expected output of sum is 10 " + myFunctionTest(10, sum(1,2,3,4)));
-console.log("Expected output of multiply is 10 " + myFunctionTest(24, multiply(1,2,3,4)));
+console.log("Expected output of isVowel(e) is true " + myFunctionTest(true, isVowel("e")));
+console.log("Expected output of sum(1,2,3,4) is 10 " + myFunctionTest(10, sum(1,2,3,4)));
+console.log("Expected output of multiply(1,2,3,4) is 10 " + myFunctionTest(24, multiply(1,2,3,4)));
 console.log("Expected output of reverse(jag testar) is ratset gaj " + myFunctionTest("ratset gaj", reverse('jag testar')));
 console.log("Expected output of findLongestWord(['hello','hi', 'software']) is 8 " + myFunctionTest(8, findLongestWord(['hello','hi', 'software'])));
 console.log("Expected output of filterLongWords(['hello','hi', 'software']) is software " + myFunctionTest("software", filterLongWords(['hello','hi', 'software'], 5)));
