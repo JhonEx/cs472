@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Text Decorator</title>
+	
+		<!--
+		This is a widely-used JavaScript library named jQuery that has
+		many useful functions which we need.
+		Please don't remove this link or change its URL; leave it as-is!
+		-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+		<!-- link to your script file here -->		
+		<link rel="stylesheet" href="style.css">		
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	</head>
+
+	<body>
+		<h1>Text Decorator</h1>		
+		<div>
+			<img src="decorated.gif" alt="very decorated!" />
+		</div>
+
+
+		<fieldset class="field">
+			<legend  style="font-weight:bold"> Text </legend>
+				<!-- <input class="child-div" type="text" id="fname" name="fname"> -->
+				<textarea class="story" name="story" rows="4" cols="30">Sample Item 1.
+Sample Item 2.
+				</textarea>
+		</fieldset>
+
+		<fieldset class="decoration">
+			<legend style="font-weight:bold"> Decoration </legend>
+			<div class="features">
+				<button id="decoration">Bigger Decorations!</button>
+			</div>
+
+			<div class="features">
+				<input type="checkbox" id="bling" name="bling" value="Bling">
+				<label for="bling">Bling</label>
+			</div>
+
+		</fieldset>
+	
+	
+		<script src="app.js"></script>	
+	</body>
+</html>
