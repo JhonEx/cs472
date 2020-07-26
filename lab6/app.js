@@ -6,7 +6,6 @@ const buttonBigger = document.getElementById('decoration');
 const textArea = document.querySelector('.story'); 
 const bling = document.getElementById('bling');
 
-
 function changeSize(){
     const style = getComputedStyle(textArea);
     let size = style.fontSize.split('p');
@@ -19,8 +18,19 @@ function textStyle(){
     document.querySelector('.story').classList.toggle('showFont'); 
 };
 
+function interval(){
+    i = setInterval(function(){
+    changeSize();
+   },500);   
+}
+
 function main(){
-    buttonBigger.addEventListener('click', () => changeSize());
+    // buttonBigger.addEventListener('click', () => changeSize());
+    buttonBigger.addEventListener('click', () => interval());
+    document.querySelector('.btnTest').addEventListener('click',() =>{
+        clearInterval(i);
+    } )
+
     bling.addEventListener('change', e => {  
         if(e.target.checked){
             textStyle();
