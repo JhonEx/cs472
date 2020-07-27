@@ -24,7 +24,7 @@ function interval(){
    },500);   
 }
 
-function main(){
+window.onload = function main(){
     // buttonBigger.addEventListener('click', () => changeSize());
     buttonBigger.addEventListener('click', () => interval());
     document.querySelector('.btnTest').addEventListener('click',() =>{
@@ -39,4 +39,3 @@ function main(){
         }
     });
 };
-main();
