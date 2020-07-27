@@ -1,10 +1,11 @@
 
 // $(".child-div").resizable();
 // alert('Hello, World!')
-console.log('Hello, World!');
+
 const buttonBigger = document.getElementById('decoration');
 const textArea = document.querySelector('.story'); 
 const bling = document.getElementById('bling');
+const igpay = document.getElementById('igpay-a');
 
 function changeSize(){
     const style = getComputedStyle(textArea);
@@ -24,10 +25,27 @@ function interval(){
    },500);   
 }
 
+function igpayAtinlay(){
+    let str = textArea.value;
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let newStr = "";
+
+    if (vowels.indexOf(str[0]) > -1) {
+        newStr = str + "-yay";
+        textArea.value = newStr;
+    } else {
+        let firstMatch = str.match(/[aeiou]/g) || 0;
+        let vowel = str.indexOf(firstMatch[0]);
+        newStr = str.substring(vowel) + '-'+str.substring(0, vowel) + "ay";
+        textArea.value = newStr;
+    }
+
+};
 window.onload = function main(){
+    "use strict";
     // buttonBigger.addEventListener('click', () => changeSize());
     buttonBigger.addEventListener('click', () => interval());
-    document.querySelector('.btnTest').addEventListener('click',() =>{
+    document.querySelector('.btnTest').addEventListener('click',() =>{        
         clearInterval(i);
     });
 
@@ -37,5 +55,10 @@ window.onload = function main(){
         }else{
             textStyle();
         }
+    });
+
+    igpay.addEventListener('click', () => {
+        console.log('hello');
+        igpayAtinlay()
     });
 };
