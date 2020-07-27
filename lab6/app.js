@@ -29,7 +29,7 @@ window.onload = function main(){
     buttonBigger.addEventListener('click', () => interval());
     document.querySelector('.btnTest').addEventListener('click',() =>{
         clearInterval(i);
-    } )
+    });
 
     bling.addEventListener('change', e => {  
         if(e.target.checked){
