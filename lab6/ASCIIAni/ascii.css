@@ -1,0 +1,47 @@
+body{
+  background-color: #CCCCFF;
+  font-family: sans-serif;
+  font-size: 14pt;
+  text-align: center;
+ 
+}
+
+h1{
+  font-weight: bold;
+  font-size: 32pt;
+  margin:0em;
+}
+
+
+#squarearea {
+  width: 90%;
+  height: 400px;
+  font-weight:bold;
+  font-size: 12pt;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#content{
+	width: 90%;
+	position: relative;
+	left: 50%;
+	margin-left: -250px;
+}
+
+.control{
+  border: 5px solid black;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+#w3c {
+	float: right;
+}
+
+#validate{
+  text-align: right;
+}
