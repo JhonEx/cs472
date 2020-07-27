@@ -41,16 +41,14 @@ window.onload = function(){
             let vowel = str.indexOf(firstMatch[0]);
             newStr = str.substring(vowel) + '-'+str.substring(0, vowel) + "ay";
             textArea.value = newStr;
-        }
-    
+        }    
     };
     function main(){      
         // buttonBigger.addEventListener('click', () => changeSize());
         buttonBigger.addEventListener('click', () => interval());
 
         document.querySelector('.btnStop').addEventListener('click',() =>{        
-            // clearInterval(setInterval(interval, 2000));
-          
+            // clearInterval(setInterval(interval, 2000));          
             clearInterval(i)
         });
     
