@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/functions.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+
+    <title>Functional Programming</title>
+
+    <script>
+        // initialize mocha
+        mocha.setup('bdd');
+
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+    <script>
+        //sum
+        describe("sum", function () {
+            it("takes numbers array, and returns sum",
+                function () {
+                    assert.equal("14", [2, 4, 3, 5].reduce((sum, item) => sum + item, 0));
+                });
+        });
+
+        //reverse
+        describe("reverse", function () {
+            it("takes string, and returns reverse string",
+                function () {
+                    assert.equal("ratset gaj", reverseString = ["jag testar"].map((newString) =>
+                        newString.split("").reverse().join("")));
+                });
+        });
+
+        //filter longest words
+        describe("filter longest 'n' words ", function () {
+            it("takes words array, and returns longest words greater than n (as per user required)",
+                function () {
+                    assert.equal(['bird','elephant'], ['cow','bird', 'as', 'elephant'].filter((words) =>
+                        words.length > 3).toString());
+                });
+        });
+
+    </script>
+</head>
+<body>
+<div id="mocha"></div>
+<script>
+    mocha.run();
+</script>
+
+<div>
+    <p>Look in the Chrome developer console to see the output with CTRL_SHIFT_J <br>
+        Or on Firefox with CTRL_SHIFT_K</p>
+</div>
+
+</body>
+</html>

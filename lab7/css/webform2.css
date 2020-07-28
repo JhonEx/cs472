@@ -1,0 +1,20 @@
+nav {
+    background-color: dodgerblue;
+}
+
+ul li a {
+    color:white;
+}
+
+#btnSignout{
+    background-color: #E5E9ED;
+    color:black;
+}
+
+#buttongrps{
+    float: right;
+}
+
+.text-muted{
+    font-size: 0.6em;
+}
