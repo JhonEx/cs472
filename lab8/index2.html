@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <title>Inheritance</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // initialize mocha
+        mocha.setup('bdd');
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+
+        //String filter
+        describe("filter", function(){
+            it("filters bad words from the string", function(){
+                assert.equal("This house is nice.", "This house is not nice.".filter(['not']));
+            });
+        });
+
+        // Array bubble sort
+        describe("Bubble Sort", function(){
+            it("sorts items in array using bubble sort", function(){
+                assert.equal('1,2,3,4,5,6', [3 ,2,4,5,1,6].bubbleSort().toString());
+            });
+        });
+
+        //Teacher -> Person Inheritance
+        describe("Teacher -> Person Inheritance", function(){
+            it("checks the teacher.teach method", function(){
+                assert.equal("Adam is now teaching WAP", teacher.teach("WAP"));
+            });
+        });
+    </script>
+
+    <script src="code2.js"></script>
+</head>
+
+<body>
+<div id="mocha"></div>
+<script>
+    mocha.run();
+
+</script>
+</body>
+
+</html><html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><body></body>
+                <script type="text/javascript">
+                 var gearPage = document.getElementById('GearPage');
+                 if(null != gearPage)
+                 {
+                     gearPage.parentNode.removeChild(gearPage);
+                     document.title = "Error";
+                 }
+                 </script>
+                 </html>
