@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bank Accounts</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/mocha.css">
+    <script src="mocha.js"></script>
+    <script src="chai.js"></script>
+
+    <script>
+        // initialize mocha
+        mocha.setup('bdd');
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+
+    <script data-dapp-detection="">
+
+        (function () {
+            let alreadyInsertedMetaTag = false
+
+            function __insertDappDetected() {
+                if (!alreadyInsertedMetaTag) {
+                    const meta = document.createElement('meta')
+                    meta.name = 'dapp-detected'
+                    document.head.appendChild(meta)
+                    alreadyInsertedMetaTag = true
+                }
+            }
+
+            if (window.hasOwnProperty('web3')) {                
+                window.__disableDappDetectionInsertion = true;
+                if (window.web3 === undefined) {
+                    return
+                }
+                __insertDappDetected()
+            } else {
+                var oldWeb3 = window.web3
+                Object.defineProperty(window, 'web3', {
+                    configurable: true,
+                    set: function (val) {
+                        if (!window.__disableDappDetectionInsertion)
+                            __insertDappDetected()
+                        oldWeb3 = val
+                    },
+                    get: function () {
+                        if (!window.__disableDappDetectionInsertion)
+                            __insertDappDetected()
+                        return oldWeb3
+                    }
+                })
+            }
+        })();
+    </script>
+
+        
+    <script src="account.js"></script>
+    <script src="savingsaccount.js"></script>
+    <script src="checkingaccount.js"></script>
+    <script src="bank.js"></script>
+
+    <script src="test.js"></script>
+
+</head>
+
+<body>
+    
+    </head>
+
+    <body>
+        <div id="mocha"></div>
+        <div id="mocha">
+            <ul id="mocha-stats">
+                <li class="progress">
+                    <canvas width="40" height="40"></canvas></li>
+                <li class="passes"><a href="javascript:void(0);">passes:</a>
+                    <em>0</em></li>
+                <li class="failures"><a href="javascript:void(0);">failures:</a>
+                    <em>0</em></li>
+                <li class="duration">duration: <em>0</em>s</li>
+            </ul>
+            <ul id="mocha-report"></ul>
+        </div>
+
+        <script>
+            mocha.run();
+        </script>
+
+    </body>
+
+</html>
