@@ -1,0 +1,33 @@
+.container > div{
+    text-align: left;
+    font-size: 15px;
+}
+
+button{
+    background-color: rgb(44, 192, 241);
+    font-size: 15px;
+}
+
+.circle{
+    border-radius: 50%;
+    border: red solid 3px;
+    padding: 1px;
+    text-align: center;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.items{
+    position: absolute;
+    display: block;        
+}
+
+h1{
+    text-align: center;
+}
+
+hr{
+    margin-bottom: 20px;
+}
