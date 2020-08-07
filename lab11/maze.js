@@ -11,6 +11,8 @@ $(document).ready(function () {
             $status.text("Game Over, refresh page to try again");
             $status.addClass('text')
         }
+        
     }
 });
 
+console.log('object');
