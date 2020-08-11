@@ -1,6 +1,27 @@
-{
-    "cpu": "8 core 4Ghz",
-    "ram": "16GB",
-    "storage": "4TB NVME",
-    "price": "$1500"
-}
+
+[  
+    
+    { 
+        "cpu": "8 core 4Ghz",
+        "ram": "16GB",
+        "storage": "4TB NVME",
+        "price": "$1500"
+    },
+
+    { 
+        "cpu": "8 core 4Ghz",
+        "ram": "16GB",
+        "storage": "4TB NVME",
+        "price": "$1500"
+    },
+
+    { 
+        "cpu": "8 core 4Ghz",
+        "ram": "16GB",
+        "storage": "4TB NVME",
+        "price": "$1500"
+    }
+]
+
+
+  
