@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="final.js"></script> -->
+    <meta charset="utf-8">
+    <style>
+        body {
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1, #btns { text-align: center; }
+        span.label {
+            display: inline-block;
+            width: 135px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Computers</h1>
+    <p id="btns">
+        <button id="btn_1">1</button>
+        <button id="btn_2">2</button>
+        <button id="btn_3">3</button>
+    </p>
+    <div>
+        <span class="label">CPU Speed:</span>
+        <span id="cpuSpeed">click a button to load</span>
+    </div>
+    <div>
+        <span class="label">Ram amount:</span>
+        <span id="ramAmount">click a button to load</span>
+    </div>
+    <div>
+        <span class="label">Storage space:</span>
+        <span id="storage">click a button to load</span>
+    </div>
+    <div>
+        <span class="label">Price:</span>
+        <span id="price">click a button to load</span>
+    </div>
+
+    <script>
+    $( ()=>{
+        console.log('test out');
+        $("button").click( function(){
+            console.log('test inside');
+            $("#cpuSpeed").text("Textooo");
+
+
+            $.get("object.json", {
+                "id":$(this).text()
+            }).done(function (data){
+                $("#cpuSpeed").text(data.cpu);
+                $("#ramAmount").text(data.ram);
+                $("#storage").text(data.storage);
+                $("#price").text(data.price);
+            });
+        });
+    });
+    </script>
+</body>
+
+</html>
