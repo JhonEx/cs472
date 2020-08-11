@@ -46,7 +46,7 @@
 
     <script>
 
-/*     $( ()=>{
+    $( ()=>{
         console.log('test out');
         $("button").click( function(){
             console.log('test inside');
@@ -62,34 +62,7 @@
                 $("#price").text(data.price);
             });
         });
-    }); */
-
-    
-"use strict";
-$(() => {
-    console.log('Tes out')
-
-    $("#btns").click(function () {
-        
-        $.ajax({
-            type:'Get',
-            uri:'https://srv-file19.gofile.io/download/06yWbb/object.json',
-            
-            success: function (data) {
-                console.log('Test in'),
-
-                $("#cpuSpeed").text(data.cpu);
-                $("#ramAmount").text(data.ram);
-                $("#storage").text(data.storage);
-                $("#price").text(data.price);
-            },
-            error: function () {
-                alert("error loading computer details");
-            }
-        });
     });
-});
-
 
     </script>
 </body>
