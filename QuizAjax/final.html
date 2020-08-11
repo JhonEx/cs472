@@ -46,7 +46,7 @@
 
     <script>
 
-    $( ()=>{
+/*     $( ()=>{
         console.log('test out');
         $("button").click( function(){
             console.log('test inside');
@@ -63,7 +63,22 @@
             });
         });
     });
+ */
 
+    "use strict";
+    $(() => {
+        $("button").click(function () {
+            var $id = $(this).text();
+            $id = $id-1;
+            $.get("object.json", { "id": $(this).text() })
+                .done(function (data) {                
+                    $("#cpuSpeed").text(data[$id].cpu);
+                    $("#ramAmount").text(data[$id].ram);
+                    $("#storage").text(data[$id].storage);
+                    $("#price").text(data[$id].price);
+                });
+        });
+    });
     </script>
 </body>
 
