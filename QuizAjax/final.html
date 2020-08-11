@@ -73,7 +73,7 @@ $(() => {
         console.log('Test in')
         $.ajax({
             type:'Get',
-            uri:'https://github.com/JhonEx/cs472/blob/master/object.json',
+            uri:'/object.json',
             success: function (data) {
                 $("#cpuSpeed").text(data.cpu);
                 $("#ramAmount").text(data.ram);
