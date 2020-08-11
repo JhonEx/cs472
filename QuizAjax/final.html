@@ -21,37 +21,34 @@
 </head>
 
 <body>
-    <h1>Computers</h1>
-    <p id="btns">
-        <button id="btn_1">1</button>
-        <button id="btn_2">2</button>
-        <button id="btn_3">3</button>
-    </p>
-    <div>
-        <span class="label">CPU Speed:</span>
-        <span id="cpuSpeed">click a button to load</span>
-    </div>
-    <div>
-        <span class="label">Ram amount:</span>
-        <span id="ramAmount">click a button to load</span>
-    </div>
-    <div>
-        <span class="label">Storage space:</span>
-        <span id="storage">click a button to load</span>
-    </div>
-    <div>
-        <span class="label">Price:</span>
-        <span id="price">click a button to load</span>
-    </div>
+<h1>Computers</h1>
+<p id="btns">
+    <button id="btn_1">1</button>
+    <button id="btn_2">2</button>
+    <button id="btn_3">3</button>
+</p>
+<div>
+    <span class="label">CPU Speed:</span>
+    <span id="cpuSpeed">click a button to load</span>
+</div>
+<div>
+    <span class="label">Ram amount:</span>
+    <span id="ramAmount">click a button to load</span>
+</div>
+<div>
+    <span class="label">Storage space:</span>
+    <span id="storage">click a button to load</span>
+</div>
+<div>
+    <span class="label">Price:</span>
+    <span id="price">click a button to load</span>
+</div>
 
-    <script>
-
-/*     $( ()=>{
+<script>
+/*    $( ()=>{
         console.log('test out');
         $("button").click( function(){
             console.log('test inside');
-            $("#cpuSpeed").text("Textooo");
-
 
             $.get("object.json", {
                 "id":$(this).text()
@@ -62,24 +59,24 @@
                 $("#price").text(data.price);
             });
         });
-    });
- */
+    });*/
 
-    "use strict";
-    $(() => {
-        $("button").click(function () {
-            var $id = $(this).text();
-            $id = $id-1;
-            $.get("object.json", { "id": $(this).text() })
-                .done(function (data) {                
-                    $("#cpuSpeed").text(data[$id].cpu);
-                    $("#ramAmount").text(data[$id].ram);
-                    $("#storage").text(data[$id].storage);
-                    $("#price").text(data[$id].price);
-                });
-        });
+"use strict";
+$(() => {
+    $("button").click(function () {
+        var $id = $(this).text();
+        $id = $id-1;
+        $.get("object.json", { "id": $(this).text() })
+            .done(function (data) {
+                $("#cpuSpeed").text(data[$id].cpu);
+                $("#ramAmount").text(data[$id].ram);
+                $("#storage").text(data[$id].storage);
+                $("#price").text(data[$id].price);
+            });
     });
-    </script>
+});
+
+</script>
 </body>
 
 </html>
