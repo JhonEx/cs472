@@ -68,6 +68,7 @@ $(() => {
         $id = $id-1;
         $.get("object.json", { "id": $(this).text() })
             .done(function (data) {
+                console.log($id);
                 $("#cpuSpeed").text(data[$id].cpu);
                 $("#ramAmount").text(data[$id].ram);
                 $("#storage").text(data[$id].storage);
